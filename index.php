@@ -33,7 +33,7 @@
 <div class="container-fluid">
     <div class="row-fluid">
         <div class="col-xs-6">
-            <h1>Parsed</h1>
+            <h1>Parsed</h1> 
             <?php
 
                 if (isset( $_REQUEST['url'] ) && ! empty( $_REQUEST['url'] )) {
@@ -41,7 +41,10 @@
 
                     $r = new \readability\Readabillity( $_REQUEST['url'] );
                     echo $r->getContent();
+                    print_r(str_word_count($r, 3));
+                    echo str_word_count($r);
                 }
+                
             ?>
         </div>
         <div class="col-xs-6">
